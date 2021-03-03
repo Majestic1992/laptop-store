@@ -16,7 +16,7 @@ const Overview = () => {
   const getLaptops = () => {
     fetch("https://alexmaa5.herokuapp.com/api/getLaptops")
       .then((res) => res.json())
-      .then((laptop) => setLaptops(...laptops, laptop))
+      .then((laptop) => setLaptops(laptop))
       .then(setLoading(!loading));
   };
 
