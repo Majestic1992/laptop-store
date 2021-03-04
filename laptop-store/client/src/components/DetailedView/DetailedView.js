@@ -18,7 +18,7 @@ const DetailedView = ({ id }) => {
       "https://alexmaa5.herokuapp.com/api/getLaptops"
     );
     const data = await response.json();
-    setLaptop(...laptop, data);
+    setLaptop(data);
     setLoading(!loading);
   };
 
