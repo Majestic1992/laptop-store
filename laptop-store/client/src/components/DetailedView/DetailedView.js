@@ -13,11 +13,13 @@ const DetailedView = ({ id }) => {
   }, []);
 
   // Retrieves the list of items from the Express server
-  const getLaptop = () => {
-    fetch("https://alexmaa5.herokuapp.com/api/getLaptops")
-      .then((res) => res.json())
-      .then((laptop) => setLaptop(laptop))
-      .then(setLoading(!loading));
+  const getLaptop = async () => {
+    const response = await fetch(
+      "https://alexmaa5.herokuapp.com/api/getLaptops"
+    );
+    const data = await response.json();
+    setLaptop(...laptop, data);
+    setLoading(!loading);
   };
 
   return (
