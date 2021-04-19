@@ -228,10 +228,17 @@
         font-size: 1.6rem;
       }
 
-      &:hover,
       &:active {
         background-color: white;
         color: black;
+      }
+
+      @media (min-width: 800px) {
+        &:hover,
+        &:active {
+          background-color: white;
+          color: black;
+        }
       }
     }
   }

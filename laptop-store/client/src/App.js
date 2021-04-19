@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.scss";
 import Overwiev from "./components/Overview/Overview";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
